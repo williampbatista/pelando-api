@@ -8,7 +8,7 @@ import br.com.tarz.pelandoapi.resource.PromocaoResource;
 
 public class PromocaoConverter {
 
-	public static Promocao toEntity(PromocaoResource resource) {
+	public static Promocao toEntity(final PromocaoResource resource) {
 		Promocao entity = new Promocao();
 
 		entity.setId(resource.getId());
@@ -18,11 +18,14 @@ public class PromocaoConverter {
 		entity.setLink(resource.getLink());
 		entity.setDtInicio(resource.getDtInicio());
 		entity.setDtTermino(resource.getDtTermino());
+		entity.setTemperatura(resource.getTemperatura());
+		entity.setCupom(resource.getCupom());
+		entity.setImage(resource.getImage());
 
 		return entity;
 	}
 
-	public static PromocaoResource toResource(Promocao entity) {
+	public static PromocaoResource toResource(final Promocao entity) {
 		PromocaoResource resource = new PromocaoResource();
 
 		resource.setId(entity.getId());
@@ -32,11 +35,14 @@ public class PromocaoConverter {
 		resource.setLink(entity.getLink());
 		resource.setDtInicio(entity.getDtInicio());
 		resource.setDtTermino(entity.getDtTermino());
+		resource.setTemperatura(entity.getTemperatura());
+		resource.setCupom(entity.getCupom());
+		resource.setImage(entity.getImage());
 
 		return resource;
 	}
 	
-	public static List<PromocaoResource> toListDto(final List<Promocao> entities) {
+	public static List<PromocaoResource> toListResource(final List<Promocao> entities) {
 		return entities.stream().map(s -> toResource(s)).collect(Collectors.toList());
 	}
 

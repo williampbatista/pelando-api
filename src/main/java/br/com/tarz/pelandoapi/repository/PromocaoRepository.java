@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import br.com.tarz.pelandoapi.entity.Promocao;
 
-public interface PromocaoRepository extends JpaRepository<Promocao, Integer>, JpaSpecificationExecutor<Promocao>{
+public interface PromocaoRepository extends JpaRepository<Promocao, Long>, JpaSpecificationExecutor<Promocao>{
 
 }

@@ -15,5 +15,8 @@ public class PromocaoResource {
 	private String link;
 	private Date dtInicio;
 	private Date dtTermino;
+	private Integer temperatura;
+	private String cupom;
+	private String image;
 
 }
